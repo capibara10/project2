@@ -36,7 +36,7 @@ main p {
     width: 80%;
     display: block;
     margin: auto;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 main h2 {
@@ -44,17 +44,35 @@ main h2 {
     display: block;
     margin: auto;
     font-size: 1.5em;
+    margin-top: 2em;
 }
 
 main img {
     display: block;
     margin: auto;
     width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-section {
+main section {
+    margin-left: 30px;
+}
+
+main section img {
     display: block;
+    width: 40%;
+    float: left;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+main article p {
+    padding: 0;
     margin: auto;
+    display: block;
+    width: 80%;
+
 }
 
 /* Navigatie */
@@ -64,11 +82,8 @@ nav {
     margin: 0;
 }
 
-nav img {
-    width: 100%;
-}
-
 nav ul {
+    display: flex;
     width: 100%;
     position: fixed;
     bottom: -7px;
@@ -78,14 +93,12 @@ nav ul {
     background-repeat: no-repeat;
     margin: 0;
     padding-top: 100px;
-    padding-bottom: 28px;
 }
 
 nav li {
     width: 100%;
-    position: relative;
-    display: inline;
     padding: 12.7px;
+    overflow: hidden;
 }
 
 nav a {
@@ -93,3 +106,41 @@ nav a {
     text-decoration: none;
     font-size: 14px;
 }
+
+nav ul li img {
+    display: block;
+    width: 90%;
+}
+
+/* Zoekbalk */
+.search {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 20px;
+    background: #f6f6f6;
+    transition: box-shadow 0.25s;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.search:focus-within {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search-input {
+    font-size: 16px;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 200px;
+}
+
+.search-input::placeholder,
+.search-icon {
+    color:  rgba(0, 0, 0, 0.5)
+}
+
